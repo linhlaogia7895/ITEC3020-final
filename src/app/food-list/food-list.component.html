@@ -1,0 +1,39 @@
+<h1 class="heading"> <span>Food List</span> </h1>
+<div class="table">
+    <table class="food-list">
+        <thead>
+            <tr class="header">
+                <th>ID</th>
+                <th>Food Name</th>
+                <th>Fat (g)</th>
+                <th>Cabohydrate (g)</th>
+                <th>Protein (g)</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let list of foodList" (click)="onSelect(list)">
+                <td>{{list.id}}</td>
+                <td class="food-name">{{list.name}}</td>
+                <td>{{list.fat}}</td>
+                <td>{{list.cab}}</td>
+                <td>{{list.protein}}</td>
+            </tr>
+        </tbody>
+        
+    
+       
+    </table>
+</div>
+
+<div *ngIf="selectedItem" class="add-section">
+    <table class="table2">
+        <tr>
+            <td class="span"><span>{{selectedItem.name}}</span></td>
+            <td class="button"><button type="button" (click)="addToday(selectedItem)">Add to Today List</button></td>
+        </tr>
+    </table>
+</div>
+
+
+

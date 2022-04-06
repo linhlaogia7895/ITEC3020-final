@@ -1,0 +1,19 @@
+.header {
+    background:#fff;
+    padding:1.5rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .logo-header a{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: green;
+    
+}
+.header .logo-header a:hover {
+    color: lightgreen;
+}
+.header .date-header {
+    font-size: 1.3rem;
+}

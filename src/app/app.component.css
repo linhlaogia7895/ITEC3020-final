@@ -1,0 +1,42 @@
+.body{    
+    display: flex;
+
+    justify-content: space-between;
+    width: 90rem;
+    height: 45rem;
+    margin: auto;
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 4px 3px 20px #3535358c;
+}
+.body .navigation{
+    background: lightblue;
+	width: 20rem;
+    height: 45rem;
+	border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border-right: 1.5px solid #ccc;
+  
+}
+.body .navigation .nav{
+    margin-top: 10rem;
+    margin-left: 5rem;
+    font-size: 2rem;
+    
+
+}
+.body .navigation .nav a{
+    color: green;
+}
+.body .navigation .nav a:hover{
+    color: blue;
+}
+.body .page-content{
+    background: white;
+	width: 60rem;
+    height: 45rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    padding-top: 5rem;
+
+}

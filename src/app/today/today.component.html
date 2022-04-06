@@ -1,0 +1,40 @@
+<h1 class="heading"> <span>Today List</span> </h1>
+<div class="table">
+    <table class="food-list">
+        <thead>
+            <tr class="header">
+                <th>Food Name</th>
+                <th>Fat (g)</th>
+                <th>Cabohydrate (g)</th>
+                <th>Protein (g)</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let list of list" (click)="onSelect(list)">
+                <td class="food-name">{{list.name}}</td>
+                <td>{{list.fat}}</td>
+                <td>{{list.cab}}</td>
+                <td>{{list.protein}}</td>
+            </tr>
+            <tr *ngIf="chart">
+                <td><h3>Summary</h3></td>
+                <td><b>{{chart.chart[0]}}</b></td>
+                <td><b>{{chart.chart[1]}}</b></td>
+                <td><b>{{chart.chart[2]}}</b></td>
+        
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="selectedItem" class="add-section">
+    <table class="table2">
+        <tr>
+            <td class="span"><span>{{selectedItem.name}}</span></td>
+            <td class="button"><button type="button" (click)="remove(selectedItem)">Remove This From List</button></td>
+        </tr>
+    </table>
+</div>
+
+
